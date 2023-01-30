@@ -56,16 +56,15 @@ public class RWFile {
 
     }
 
-    public void write() throws IOException {
+    public void write(String text, int sleep) throws IOException, InterruptedException {
 //        outputStream = new FileOutputStream("out.txt");
 //        outputStream.write(new byte[]{ '@', 32, 65 });
 
+        System.out.println("sleep = " + sleep);
+        Thread.sleep(sleep);
         FileWriter fileWriter = new FileWriter("out.txt", true);
-        String hello = "Hello";
-        String world = "World";
         fileWriter.write('\n');
-        fileWriter.write(hello);
-        fileWriter.write(world);
+        fileWriter.write(text);
         fileWriter.flush();
     }
 }

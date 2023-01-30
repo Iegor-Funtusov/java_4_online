@@ -1,0 +1,31 @@
+//[
+//  {
+//    "id": "fsdfa",
+//    "firstName": "fddsafas",
+//    "lastName": "fddsafas",
+//    "fullName": "fddsafas"
+//  },
+//  {
+//    "id": "fsdfa",
+//    "firstName": "fddsafas",
+//    "lastName": "fddsafas",
+//    "fullName": "fddsafas"
+//  }
+//]
+
+{
+  "students": [
+    {
+      "id": "fsdfa",
+      "firstName": "fddsafas",
+      "lastName": "fddsafas",
+      "fullName": "fddsafas"
+    },
+    {
+      "id": "fsdfa",
+      "firstName": "fddsafas",
+      "lastName": "fddsafas",
+      "fullName": "fddsafas"
+    }
+  ]
+}

@@ -1,6 +1,11 @@
 package ua.com.alevel;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.FileVisitResult;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
@@ -21,7 +26,46 @@ public class Main {
 //        RWFile rwFile = new RWFile();
 //        rwFile.read(FILE);
 //        rwFile.write();
-        SerialTest serialTest = new SerialTest();
-        serialTest.test();
+//        SerialTest serialTest = new SerialTest();
+//        serialTest.test();
+//        FileNIO fileNIO = new FileNIO();
+//        fileNIO.create(FILE);
+//        fileNIO.createDir(DIR);
+//        fileNIO.createDirs(DIRS);
+//        fileNIO.write(FILE, "\nHello World");
+//        fileNIO.read(FILE);
+        List<WriteTest> writeTests = new ArrayList<>();
+        for (int i = 0; i < 15; i++) {
+            writeTests.add(new WriteTest());
+        }
+        for (WriteTest writeTest : writeTests) {
+            writeTest.start();
+        }
+
+
+
+        // old style
+        FileReader reader = null;
+        BufferedReader bufferedReader = null;
+        try {
+            reader = new FileReader("file.txt");
+            bufferedReader = new BufferedReader(reader);
+        } catch (Exception e) {
+
+        }
+        finally {
+            bufferedReader.close();
+            reader.close();
+        }
+
+        try(
+                FileReader reader1 = new FileReader("file.txt");
+                BufferedReader bufferedReader1 = new BufferedReader(reader)
+                ) {
+            String s = bufferedReader1.readLine();
+            System.out.println("s = " + s);
+        } catch (Exception e) {
+
+        }
     }
 }
