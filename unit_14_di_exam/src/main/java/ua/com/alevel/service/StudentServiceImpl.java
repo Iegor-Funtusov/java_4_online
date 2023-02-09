@@ -28,7 +28,7 @@ public class StudentServiceImpl implements StudentService {
     public void update(String id, StudentDto dto) { }
 
     @Override
-    public void delete(String id) { }
+    public void delete(String id) {}
 
     @Override
     public Student findById(String id) {
