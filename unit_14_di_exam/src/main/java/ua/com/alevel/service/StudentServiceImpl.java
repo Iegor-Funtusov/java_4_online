@@ -25,14 +25,10 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public void update(String id, StudentDto dto) {
-
-    }
+    public void update(String id, StudentDto dto) { }
 
     @Override
-    public void delete(String id) {
-
-    }
+    public void delete(String id) { }
 
     @Override
     public Student findById(String id) {
