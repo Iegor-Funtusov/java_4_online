@@ -8,6 +8,7 @@ public class Student extends BaseEntity implements Serializable {
     private String email;
     private String gitHubAcc;
     private String telegramAcc;
+    private int friendsCount;
 
     public String getName() {
         return name;
@@ -39,6 +40,14 @@ public class Student extends BaseEntity implements Serializable {
 
     public void setTelegramAcc(String telegramAcc) {
         this.telegramAcc = telegramAcc;
+    }
+
+    public int getFriendsCount() {
+        return friendsCount;
+    }
+
+    public void setFriendsCount(int friendsCount) {
+        this.friendsCount = friendsCount;
     }
 
     @Override
