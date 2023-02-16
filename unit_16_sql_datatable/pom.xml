@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ua.com.alevel</groupId>
-    <artifactId>unit_3_start_oop</artifactId>
+    <artifactId>unit_16_sql_datatable</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -13,10 +13,24 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.plugin.version>3.10.1</maven.compiler.plugin.version>
         <maven.shade.plugin.version>3.2.4</maven.shade.plugin.version>
+        <mysql-connector-j.version>8.0.32</mysql-connector-j.version>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>ua.com.alevel</groupId>
+            <artifactId>di_framework</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>${mysql-connector-j.version}</version>
+        </dependency>
+    </dependencies>
+
     <build>
-        <finalName>unit_3_start_oop</finalName>
+        <finalName>sql_datatable</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -25,7 +39,7 @@
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
-                    <encoding>UTF-8</encoding>
+                    <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
             </plugin>
 
@@ -51,4 +65,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>

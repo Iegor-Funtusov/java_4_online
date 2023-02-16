@@ -4,6 +4,7 @@ import org.reflections.Reflections;
 import ua.com.alevel.annotations.BeanClass;
 import ua.com.alevel.configutator.BeanConfigurator;
 import ua.com.alevel.configutator.impl.InjectBeanAnnotationBeanConfigurator;
+import ua.com.alevel.configutator.impl.ValueAnnotationBeanConfigurator;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
@@ -16,7 +17,9 @@ import java.util.Set;
 public class BeanFactory {
 
     private static Map<Class<?>, Object> beanMap = new HashMap<>();
-    private List<BeanConfigurator> beanConfigurators = Arrays.asList(new InjectBeanAnnotationBeanConfigurator());
+    private List<BeanConfigurator> beanConfigurators = Arrays.asList(
+            new InjectBeanAnnotationBeanConfigurator(),
+            new ValueAnnotationBeanConfigurator());
 
     public BeanFactory(Set<Class<?>> interfaces, Reflections scanner) {
         initBeanMap(interfaces, scanner);
