@@ -3,6 +3,7 @@ package ua.com.alevel.service.impl;
 import ua.com.alevel.annotations.BeanClass;
 import ua.com.alevel.annotations.InjectBean;
 import ua.com.alevel.persistence.dao.DepartmentDao;
+import ua.com.alevel.persistence.dto.DepartmentDto;
 import ua.com.alevel.persistence.entity.Department;
 import ua.com.alevel.service.DepartmentService;
 
@@ -37,5 +38,10 @@ public class DepartmentServiceImpl implements DepartmentService {
     @Override
     public Collection<Department> findAll() {
         return null;
+    }
+
+    @Override
+    public Collection<DepartmentDto> findEmpoleeCountByDepartmentType() {
+        return departmentDao.findEmpoleeCountByDepartmentType();
     }
 }

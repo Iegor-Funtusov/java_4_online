@@ -1,5 +1,6 @@
 package ua.com.alevel.persistence.dao;
 
+import ua.com.alevel.persistence.dto.DepartmentDto;
 import ua.com.alevel.persistence.entity.Department;
 
 import java.util.Collection;
@@ -12,4 +13,5 @@ public interface DepartmentDao {
     void delete(Long id);
     Optional<Department> findById(Long id);
     Collection<Department> findAll();
+    Collection<DepartmentDto> findEmpoleeCountByDepartmentType();
 }

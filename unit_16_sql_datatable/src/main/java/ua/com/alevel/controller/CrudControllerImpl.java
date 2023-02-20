@@ -4,6 +4,7 @@ import ua.com.alevel.annotations.BeanClass;
 import ua.com.alevel.annotations.Controller;
 import ua.com.alevel.annotations.InjectBean;
 import ua.com.alevel.annotations.Start;
+import ua.com.alevel.persistence.dto.DepartmentDto;
 import ua.com.alevel.persistence.entity.Employee;
 import ua.com.alevel.service.DepartmentService;
 import ua.com.alevel.service.EmployeeService;
@@ -35,6 +36,9 @@ public class CrudControllerImpl implements CrudController {
         }
     }
 
+    /**
+    Menu
+    */
     private void menu() {
         System.out.println();
         System.out.println("If you want create Employee, please enter 1");
@@ -48,7 +52,8 @@ public class CrudControllerImpl implements CrudController {
         System.out.println("If you want update Department, please enter 9");
         System.out.println("If you want find all Department, please enter 10");
         System.out.println("If you want find all employees by department, please enter 11");
-        System.out.println("If you want close application, please enter 12");
+        System.out.println("If you want find all employees by department, please enter 12");
+        System.out.println("If you want close application, please enter 13");
         System.out.println();
     }
 
@@ -65,9 +70,18 @@ public class CrudControllerImpl implements CrudController {
             case "9" : updateDepartment(reader); break;
             case "10" : findAllDepartment(); break;
             case "11" : findByDepartment(reader); break;
-            case "12" : stop(); break;
+            case "12" : findEmpoleeCountByDepartmentType(); break;
+            case "13" : stop(); break;
         }
         menu();
+    }
+
+    private void findEmpoleeCountByDepartmentType() {
+        System.out.println("CrudControllerImpl.findEmpoleeCountByDepartmentType");
+        Collection<DepartmentDto> departmentDtos = departmentService.findEmpoleeCountByDepartmentType();
+        for (DepartmentDto departmentDto : departmentDtos) {
+            System.out.println("departmentDto = " + departmentDto);
+        }
     }
 
     private void findByDepartment(BufferedReader reader) throws IOException {

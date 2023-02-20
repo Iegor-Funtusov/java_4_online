@@ -4,7 +4,7 @@ import ua.com.alevel.persistence.type.DepartmentType;
 
 public class Department extends BaseEntity {
 
-    public DepartmentType departmentType;
+    private DepartmentType departmentType;
 
     public Department() {
         super();

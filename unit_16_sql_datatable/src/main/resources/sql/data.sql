@@ -29,3 +29,14 @@ select count(*) as count_of_employee from employees;
 select sum(age) from employees;
 
 select distinct(first_name) from employees;
+
+select d.id, d.created, d.updated, d.department_type, count(dep_id) as employee_count
+from departments as d left join dep_emp as de on d.id = de.dep_id group by d.id having d.id > 0;
+
+select *
+from departments as d left join dep_emp as de on d.id = de.dep_id where d.id in (1, 3);
+
+select d.id, d.created, d.updated, d.department_type, count(dep_id) as employee_count
+from departments as d left join dep_emp as de on d.id = de.dep_id where de.emp_id in (
+    select e.id from employees as e where e.age > 20
+) group by d.id;
