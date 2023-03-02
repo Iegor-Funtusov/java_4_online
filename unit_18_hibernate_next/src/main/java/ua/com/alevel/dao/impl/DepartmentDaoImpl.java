@@ -4,8 +4,10 @@ import jakarta.persistence.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.query.NativeQuery;
 import ua.com.alevel.config.HibernateConfig;
 import ua.com.alevel.dao.DepartmentDao;
+import ua.com.alevel.dto.DepartmentDto;
 import ua.com.alevel.entity.Department;
 
 import java.util.Collection;
@@ -90,6 +92,26 @@ public class DepartmentDaoImpl implements DepartmentDao {
             List<Department> departments = query.getResultList();
             transaction.commit();
             return departments;
+        } catch (Exception e) {
+            System.out.println("e = " + e.getMessage());
+            if (transaction != null) {
+                transaction.rollback();
+            }
+        }
+        return Collections.emptyList();
+    }
+
+    @Override
+    public Collection<DepartmentDto> findDepartmentDto() {
+        Transaction transaction = null;
+        try(Session session = sessionFactory.getCurrentSession()) {
+            transaction = session.beginTransaction();
+            Query query = session.createQuery("select new ua.com.alevel.dto.DepartmentDto(d, count (d.id)) from Department d left join d.employees group by d.id");
+//            NativeQuery nativeQuery = session.createNativeQuery("select d.id, d.created, d.department_type, count(dep_id) as employee_count\n" +
+//                    "            from departments as d left join dep_emp as de on d.id = de.dep_id group by d.id");
+            Collection<DepartmentDto> dtoList = query.getResultList();
+            transaction.commit();
+            return dtoList;
         } catch (Exception e) {
             System.out.println("e = " + e.getMessage());
             if (transaction != null) {

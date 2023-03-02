@@ -4,10 +4,13 @@ import ua.com.alevel.dao.DepartmentDao;
 import ua.com.alevel.dao.EmployeeDao;
 import ua.com.alevel.dao.impl.DepartmentDaoImpl;
 import ua.com.alevel.dao.impl.EmployeeDaoImpl;
+import ua.com.alevel.dto.DepartmentDto;
 import ua.com.alevel.entity.Department;
 import ua.com.alevel.entity.Employee;
 import ua.com.alevel.type.DepartmentType;
 
+import java.sql.Connection;
+import java.util.Collection;
 import java.util.Optional;
 import java.util.Set;
 
@@ -21,7 +24,8 @@ public class DepEmpCrud {
 //        createEmployee();
 //        findById();
 //        attachEmployeeToDepartment();
-        deleteEmployee();
+//        deleteEmployee();
+        join();
     }
 
     private void createDepartament() {
@@ -43,29 +47,13 @@ public class DepEmpCrud {
     }
 
     private void createEmployee() {
-        Employee employee1 = new Employee();
-        employee1.setFirstName("Name1");
-        employee1.setLastName("Namenko1");
-        employee1.setAge(20);
-        employeeDao.create(employee1);
-
-        Employee employee2 = new Employee();
-        employee2.setFirstName("Name2");
-        employee2.setLastName("Namenko2");
-        employee2.setAge(22);
-        employeeDao.create(employee2);
-
-        Employee employee3 = new Employee();
-        employee3.setFirstName("Name3");
-        employee3.setLastName("Namenko3");
-        employee3.setAge(23);
-        employeeDao.create(employee3);
-
-        Employee employee4 = new Employee();
-        employee4.setFirstName("Name4");
-        employee4.setLastName("Namenko4");
-        employee4.setAge(24);
-        employeeDao.create(employee4);
+        for (int i = 0; i < 20; i++) {
+            Employee employee1 = new Employee();
+            employee1.setFirstName("Name" + i);
+            employee1.setLastName("Namenko" + i);
+            employee1.setAge(20 + i);
+            employeeDao.create(employee1);
+        }
     }
 
     private void findById() {
@@ -93,5 +81,22 @@ public class DepEmpCrud {
         employees.remove(employee1);
         departmentDao.update(department);
         employeeDao.delete(employee1);
+    }
+
+    private void join() {
+//        Department department = departmentDao.findById(2L).get();
+//        System.out.println("department = " + department.getId());
+//        System.out.println("employees = " + department.getEmployees().size());
+
+        Collection<DepartmentDto> departmentDtos = departmentDao.findDepartmentDto();
+        for (DepartmentDto departmentDto : departmentDtos) {
+            Department department = departmentDto.department();
+            if (department != null) {
+                DepartmentType departmentType = department.getDepartmentType();
+                long count = departmentDto.employeeCount();
+                System.out.println("departmentType = " + departmentType);
+                System.out.println("count = " + count);
+            }
+        }
     }
 }
