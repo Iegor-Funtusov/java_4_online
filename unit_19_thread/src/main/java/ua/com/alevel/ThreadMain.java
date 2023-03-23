@@ -1,7 +1,7 @@
 package ua.com.alevel;
 
-public class Main {
+public class ThreadMain {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        new ThreadTest().test();
     }
 }
