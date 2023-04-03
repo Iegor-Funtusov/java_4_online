@@ -1,0 +1,205 @@
+03-Apr-2023 20:07:12.758 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.7
+03-Apr-2023 20:07:12.760 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 27 2023 20:25:27 UTC
+03-Apr-2023 20:07:12.760 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.7.0
+03-Apr-2023 20:07:12.760 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+03-Apr-2023 20:07:12.760 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            13.3
+03-Apr-2023 20:07:12.760 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          aarch64
+03-Apr-2023 20:07:12.760 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Users/egorfuntusov/Library/Java/JavaVirtualMachines/Java17/Contents/Home
+03-Apr-2023 20:07:12.760 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.1+12-LTS-39
+03-Apr-2023 20:07:12.760 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+03-Apr-2023 20:07:12.760 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/egorfuntusov/Desktop/apache-tomcat-10.1.7
+03-Apr-2023 20:07:12.760 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/egorfuntusov/Desktop/apache-tomcat-10.1.7
+03-Apr-2023 20:07:12.766 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/egorfuntusov/Desktop/apache-tomcat-10.1.7/conf/logging.properties
+03-Apr-2023 20:07:12.766 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+03-Apr-2023 20:07:12.766 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+03-Apr-2023 20:07:12.766 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+03-Apr-2023 20:07:12.766 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+03-Apr-2023 20:07:12.766 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+03-Apr-2023 20:07:12.766 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+03-Apr-2023 20:07:12.766 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+03-Apr-2023 20:07:12.766 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+03-Apr-2023 20:07:12.766 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+03-Apr-2023 20:07:12.766 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/egorfuntusov/Desktop/apache-tomcat-10.1.7
+03-Apr-2023 20:07:12.766 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/egorfuntusov/Desktop/apache-tomcat-10.1.7
+03-Apr-2023 20:07:12.766 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/egorfuntusov/Desktop/apache-tomcat-10.1.7/temp
+03-Apr-2023 20:07:12.767 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/egorfuntusov/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+03-Apr-2023 20:07:12.867 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+03-Apr-2023 20:07:12.879 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [186] milliseconds
+03-Apr-2023 20:07:12.895 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+03-Apr-2023 20:07:12.895 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.7]
+03-Apr-2023 20:07:12.899 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/egorfuntusov/Desktop/apache-tomcat-10.1.7/webapps/docs]
+03-Apr-2023 20:07:13.030 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/egorfuntusov/Desktop/apache-tomcat-10.1.7/webapps/docs] has finished in [130] ms
+03-Apr-2023 20:07:13.030 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/egorfuntusov/Desktop/apache-tomcat-10.1.7/webapps/manager]
+03-Apr-2023 20:07:13.045 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/egorfuntusov/Desktop/apache-tomcat-10.1.7/webapps/manager] has finished in [15] ms
+03-Apr-2023 20:07:13.046 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/egorfuntusov/Desktop/apache-tomcat-10.1.7/webapps/examples]
+03-Apr-2023 20:07:13.143 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/egorfuntusov/Desktop/apache-tomcat-10.1.7/webapps/examples] has finished in [96] ms
+03-Apr-2023 20:07:13.143 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/egorfuntusov/Desktop/apache-tomcat-10.1.7/webapps/ROOT]
+03-Apr-2023 20:07:13.152 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/egorfuntusov/Desktop/apache-tomcat-10.1.7/webapps/ROOT] has finished in [9] ms
+03-Apr-2023 20:07:13.152 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/egorfuntusov/Desktop/apache-tomcat-10.1.7/webapps/host-manager]
+03-Apr-2023 20:07:13.162 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/egorfuntusov/Desktop/apache-tomcat-10.1.7/webapps/host-manager] has finished in [9] ms
+03-Apr-2023 20:07:13.163 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+03-Apr-2023 20:07:13.168 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [289] milliseconds
+03-Apr-2023 20:08:58.761 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+03-Apr-2023 20:08:58.762 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+03-Apr-2023 20:08:58.763 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+03-Apr-2023 20:08:58.770 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+03-Apr-2023 20:08:58.771 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+03-Apr-2023 20:41:19.487 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.7
+03-Apr-2023 20:41:19.489 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 27 2023 20:25:27 UTC
+03-Apr-2023 20:41:19.489 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.7.0
+03-Apr-2023 20:41:19.489 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+03-Apr-2023 20:41:19.489 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            13.3
+03-Apr-2023 20:41:19.489 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          aarch64
+03-Apr-2023 20:41:19.489 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Users/egorfuntusov/Library/Java/JavaVirtualMachines/Java17/Contents/Home
+03-Apr-2023 20:41:19.489 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.1+12-LTS-39
+03-Apr-2023 20:41:19.489 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+03-Apr-2023 20:41:19.489 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/egorfuntusov/Projects/A-Level/java_4_online/unit_21_servlet/apache-tomcat-10.1.7
+03-Apr-2023 20:41:19.489 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/egorfuntusov/Projects/A-Level/java_4_online/unit_21_servlet/apache-tomcat-10.1.7
+03-Apr-2023 20:41:19.494 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/egorfuntusov/Projects/A-Level/java_4_online/unit_21_servlet/apache-tomcat-10.1.7/conf/logging.properties
+03-Apr-2023 20:41:19.494 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+03-Apr-2023 20:41:19.494 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+03-Apr-2023 20:41:19.494 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+03-Apr-2023 20:41:19.494 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+03-Apr-2023 20:41:19.494 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+03-Apr-2023 20:41:19.494 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+03-Apr-2023 20:41:19.494 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+03-Apr-2023 20:41:19.494 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+03-Apr-2023 20:41:19.494 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+03-Apr-2023 20:41:19.494 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/egorfuntusov/Projects/A-Level/java_4_online/unit_21_servlet/apache-tomcat-10.1.7
+03-Apr-2023 20:41:19.494 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/egorfuntusov/Projects/A-Level/java_4_online/unit_21_servlet/apache-tomcat-10.1.7
+03-Apr-2023 20:41:19.494 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/egorfuntusov/Projects/A-Level/java_4_online/unit_21_servlet/apache-tomcat-10.1.7/temp
+03-Apr-2023 20:41:19.495 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/egorfuntusov/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+03-Apr-2023 20:41:19.593 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+03-Apr-2023 20:41:19.603 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [188] milliseconds
+03-Apr-2023 20:41:19.617 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+03-Apr-2023 20:41:19.617 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.7]
+03-Apr-2023 20:41:19.625 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/Users/egorfuntusov/Projects/A-Level/java_4_online/unit_21_servlet/apache-tomcat-10.1.7/webapps/servlet_test.war]
+03-Apr-2023 20:41:19.678 WARNING [main] org.apache.tomcat.util.descriptor.web.WebXml.setVersion Unknown version string [6-0]. Default version will be used.
+03-Apr-2023 20:41:19.744 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/Users/egorfuntusov/Projects/A-Level/java_4_online/unit_21_servlet/apache-tomcat-10.1.7/webapps/servlet_test.war] has finished in [119] ms
+03-Apr-2023 20:41:19.745 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+03-Apr-2023 20:41:19.750 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [146] milliseconds
+03-Apr-2023 20:44:09.647 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+03-Apr-2023 20:44:09.647 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+03-Apr-2023 20:44:09.649 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+03-Apr-2023 20:44:09.653 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+03-Apr-2023 20:44:09.654 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+03-Apr-2023 20:49:26.556 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.7
+03-Apr-2023 20:49:26.558 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 27 2023 20:25:27 UTC
+03-Apr-2023 20:49:26.558 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.7.0
+03-Apr-2023 20:49:26.558 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+03-Apr-2023 20:49:26.558 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            13.3
+03-Apr-2023 20:49:26.558 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          aarch64
+03-Apr-2023 20:49:26.558 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Users/egorfuntusov/Library/Java/JavaVirtualMachines/Java17/Contents/Home
+03-Apr-2023 20:49:26.558 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.1+12-LTS-39
+03-Apr-2023 20:49:26.558 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+03-Apr-2023 20:49:26.558 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/egorfuntusov/Projects/A-Level/java_4_online/unit_21_servlet/apache-tomcat-10.1.7
+03-Apr-2023 20:49:26.558 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/egorfuntusov/Projects/A-Level/java_4_online/unit_21_servlet/apache-tomcat-10.1.7
+03-Apr-2023 20:49:26.562 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/egorfuntusov/Projects/A-Level/java_4_online/unit_21_servlet/apache-tomcat-10.1.7/conf/logging.properties
+03-Apr-2023 20:49:26.562 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+03-Apr-2023 20:49:26.562 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+03-Apr-2023 20:49:26.562 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+03-Apr-2023 20:49:26.562 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+03-Apr-2023 20:49:26.562 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+03-Apr-2023 20:49:26.562 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+03-Apr-2023 20:49:26.562 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+03-Apr-2023 20:49:26.562 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+03-Apr-2023 20:49:26.563 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+03-Apr-2023 20:49:26.563 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/egorfuntusov/Projects/A-Level/java_4_online/unit_21_servlet/apache-tomcat-10.1.7
+03-Apr-2023 20:49:26.563 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/egorfuntusov/Projects/A-Level/java_4_online/unit_21_servlet/apache-tomcat-10.1.7
+03-Apr-2023 20:49:26.563 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/egorfuntusov/Projects/A-Level/java_4_online/unit_21_servlet/apache-tomcat-10.1.7/temp
+03-Apr-2023 20:49:26.563 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/egorfuntusov/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+03-Apr-2023 20:49:26.663 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+03-Apr-2023 20:49:26.673 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [182] milliseconds
+03-Apr-2023 20:49:26.685 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+03-Apr-2023 20:49:26.685 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.7]
+03-Apr-2023 20:49:26.692 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/Users/egorfuntusov/Projects/A-Level/java_4_online/unit_21_servlet/apache-tomcat-10.1.7/webapps/servlet_test.war]
+03-Apr-2023 20:49:26.699 INFO [main] org.apache.catalina.startup.ExpandWar.expand An expanded directory [/Users/egorfuntusov/Projects/A-Level/java_4_online/unit_21_servlet/apache-tomcat-10.1.7/webapps/servlet_test] was found with a last modified time that did not match the associated WAR. It will be deleted.
+03-Apr-2023 20:49:26.743 WARNING [main] org.apache.tomcat.util.descriptor.web.WebXml.setVersion Unknown version string [6-0]. Default version will be used.
+03-Apr-2023 20:49:26.806 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/Users/egorfuntusov/Projects/A-Level/java_4_online/unit_21_servlet/apache-tomcat-10.1.7/webapps/servlet_test.war] has finished in [114] ms
+03-Apr-2023 20:49:26.807 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+03-Apr-2023 20:49:26.811 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [138] milliseconds
+03-Apr-2023 20:55:42.706 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+03-Apr-2023 20:55:42.706 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+03-Apr-2023 20:55:42.708 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+03-Apr-2023 20:55:42.712 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+03-Apr-2023 20:55:42.714 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+03-Apr-2023 20:55:56.028 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.7
+03-Apr-2023 20:55:56.029 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 27 2023 20:25:27 UTC
+03-Apr-2023 20:55:56.029 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.7.0
+03-Apr-2023 20:55:56.029 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+03-Apr-2023 20:55:56.029 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            13.3
+03-Apr-2023 20:55:56.029 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          aarch64
+03-Apr-2023 20:55:56.029 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Users/egorfuntusov/Library/Java/JavaVirtualMachines/Java17/Contents/Home
+03-Apr-2023 20:55:56.029 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.1+12-LTS-39
+03-Apr-2023 20:55:56.029 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+03-Apr-2023 20:55:56.030 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/egorfuntusov/Projects/A-Level/java_4_online/unit_21_servlet/apache-tomcat-10.1.7
+03-Apr-2023 20:55:56.030 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/egorfuntusov/Projects/A-Level/java_4_online/unit_21_servlet/apache-tomcat-10.1.7
+03-Apr-2023 20:55:56.034 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/egorfuntusov/Projects/A-Level/java_4_online/unit_21_servlet/apache-tomcat-10.1.7/conf/logging.properties
+03-Apr-2023 20:55:56.034 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+03-Apr-2023 20:55:56.034 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+03-Apr-2023 20:55:56.034 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+03-Apr-2023 20:55:56.034 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+03-Apr-2023 20:55:56.035 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+03-Apr-2023 20:55:56.035 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+03-Apr-2023 20:55:56.035 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+03-Apr-2023 20:55:56.035 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+03-Apr-2023 20:55:56.035 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+03-Apr-2023 20:55:56.035 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/egorfuntusov/Projects/A-Level/java_4_online/unit_21_servlet/apache-tomcat-10.1.7
+03-Apr-2023 20:55:56.035 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/egorfuntusov/Projects/A-Level/java_4_online/unit_21_servlet/apache-tomcat-10.1.7
+03-Apr-2023 20:55:56.035 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/egorfuntusov/Projects/A-Level/java_4_online/unit_21_servlet/apache-tomcat-10.1.7/temp
+03-Apr-2023 20:55:56.036 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/egorfuntusov/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+03-Apr-2023 20:55:56.133 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+03-Apr-2023 20:55:56.144 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [184] milliseconds
+03-Apr-2023 20:55:56.156 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+03-Apr-2023 20:55:56.156 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.7]
+03-Apr-2023 20:55:56.164 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/Users/egorfuntusov/Projects/A-Level/java_4_online/unit_21_servlet/apache-tomcat-10.1.7/webapps/servlet_test.war]
+03-Apr-2023 20:55:56.170 INFO [main] org.apache.catalina.startup.ExpandWar.expand An expanded directory [/Users/egorfuntusov/Projects/A-Level/java_4_online/unit_21_servlet/apache-tomcat-10.1.7/webapps/servlet_test] was found with a last modified time that did not match the associated WAR. It will be deleted.
+03-Apr-2023 20:55:56.216 WARNING [main] org.apache.tomcat.util.descriptor.web.WebXml.setVersion Unknown version string [6-0]. Default version will be used.
+03-Apr-2023 20:55:56.280 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/Users/egorfuntusov/Projects/A-Level/java_4_online/unit_21_servlet/apache-tomcat-10.1.7/webapps/servlet_test.war] has finished in [117] ms
+03-Apr-2023 20:55:56.281 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+03-Apr-2023 20:55:56.285 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [141] milliseconds
+03-Apr-2023 20:56:36.872 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+03-Apr-2023 20:56:36.872 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+03-Apr-2023 20:56:36.873 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+03-Apr-2023 20:56:36.878 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+03-Apr-2023 20:56:36.879 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+03-Apr-2023 21:16:30.042 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.7
+03-Apr-2023 21:16:30.043 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 27 2023 20:25:27 UTC
+03-Apr-2023 21:16:30.043 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.7.0
+03-Apr-2023 21:16:30.043 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+03-Apr-2023 21:16:30.043 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            13.3
+03-Apr-2023 21:16:30.043 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          aarch64
+03-Apr-2023 21:16:30.043 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Users/egorfuntusov/Library/Java/JavaVirtualMachines/Java17/Contents/Home
+03-Apr-2023 21:16:30.043 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.1+12-LTS-39
+03-Apr-2023 21:16:30.043 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+03-Apr-2023 21:16:30.043 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/egorfuntusov/Projects/A-Level/java_4_online/unit_21_servlet/apache-tomcat-10.1.7
+03-Apr-2023 21:16:30.043 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/egorfuntusov/Projects/A-Level/java_4_online/unit_21_servlet/apache-tomcat-10.1.7
+03-Apr-2023 21:16:30.047 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/egorfuntusov/Projects/A-Level/java_4_online/unit_21_servlet/apache-tomcat-10.1.7/conf/logging.properties
+03-Apr-2023 21:16:30.048 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+03-Apr-2023 21:16:30.048 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+03-Apr-2023 21:16:30.048 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+03-Apr-2023 21:16:30.048 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+03-Apr-2023 21:16:30.048 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+03-Apr-2023 21:16:30.048 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+03-Apr-2023 21:16:30.048 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+03-Apr-2023 21:16:30.048 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+03-Apr-2023 21:16:30.048 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+03-Apr-2023 21:16:30.048 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/egorfuntusov/Projects/A-Level/java_4_online/unit_21_servlet/apache-tomcat-10.1.7
+03-Apr-2023 21:16:30.048 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/egorfuntusov/Projects/A-Level/java_4_online/unit_21_servlet/apache-tomcat-10.1.7
+03-Apr-2023 21:16:30.048 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/egorfuntusov/Projects/A-Level/java_4_online/unit_21_servlet/apache-tomcat-10.1.7/temp
+03-Apr-2023 21:16:30.049 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/egorfuntusov/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+03-Apr-2023 21:16:30.151 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+03-Apr-2023 21:16:30.160 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [184] milliseconds
+03-Apr-2023 21:16:30.173 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+03-Apr-2023 21:16:30.173 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.7]
+03-Apr-2023 21:16:30.180 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/Users/egorfuntusov/Projects/A-Level/java_4_online/unit_21_servlet/apache-tomcat-10.1.7/webapps/servlet_test.war]
+03-Apr-2023 21:16:30.188 INFO [main] org.apache.catalina.startup.ExpandWar.expand An expanded directory [/Users/egorfuntusov/Projects/A-Level/java_4_online/unit_21_servlet/apache-tomcat-10.1.7/webapps/servlet_test] was found with a last modified time that did not match the associated WAR. It will be deleted.
+03-Apr-2023 21:16:30.233 WARNING [main] org.apache.tomcat.util.descriptor.web.WebXml.setVersion Unknown version string [6-0]. Default version will be used.
+03-Apr-2023 21:16:30.296 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/Users/egorfuntusov/Projects/A-Level/java_4_online/unit_21_servlet/apache-tomcat-10.1.7/webapps/servlet_test.war] has finished in [116] ms
+03-Apr-2023 21:16:30.298 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+03-Apr-2023 21:16:30.302 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [141] milliseconds
+03-Apr-2023 21:19:41.377 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+03-Apr-2023 21:19:41.377 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+03-Apr-2023 21:19:41.379 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+03-Apr-2023 21:19:41.383 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+03-Apr-2023 21:19:41.384 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
