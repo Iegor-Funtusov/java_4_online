@@ -1,4 +1,4 @@
-package ua.com.alevel.config.securiry;
+package ua.com.alevel.config.securiry.impl;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

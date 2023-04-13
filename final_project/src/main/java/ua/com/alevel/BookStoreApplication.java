@@ -14,20 +14,28 @@ import ua.com.alevel.persistence.repository.user.PersonalRepository;
 @SpringBootApplication
 public class BookStoreApplication {
 
-    @Autowired
-    private BCryptPasswordEncoder passwordEncoder;
-
-    @Autowired
+    @Autowired // 1 - @Autowired on field
     private PersonalRepository personalRepository;
 
-    @Autowired
-    private AdminRepository adminRepository;
+    private BCryptPasswordEncoder passwordEncoder;
+
+    private final AdminRepository adminRepository;
+
+    // inject on constructor
+    public BookStoreApplication(AdminRepository adminRepository) {
+        this.adminRepository = adminRepository;
+    }
+
+    @Autowired // 1 - @Autowired on setter
+    public void setPasswordEncoder(BCryptPasswordEncoder passwordEncoder) {
+        this.passwordEncoder = passwordEncoder;
+    }
 
     public static void main(String[] args) {
         SpringApplication.run(BookStoreApplication.class, args);
     }
 
-    @EventListener(ApplicationReadyEvent.class)
+//    @EventListener(ApplicationReadyEvent.class)
     public void testListener() {
         String pass = "123qwerty!";
         System.out.println("pass = " + pass);
