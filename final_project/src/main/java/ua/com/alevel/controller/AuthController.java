@@ -24,7 +24,7 @@ public class AuthController {
 
     @GetMapping("/")
     public String index() {
-        return redirectToPageByRole();
+        return "redirect:/books";
     }
 
     @GetMapping("/home")

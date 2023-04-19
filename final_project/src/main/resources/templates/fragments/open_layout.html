@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div layout:fragment="main_content">
+    <nav class="navbar navbar-dark bg-dark navbar-fixed-top">
+        <a class="nav-item nav-link" th:href="@{/books}">Books</a>
+        <a class="nav-item nav-link" th:href="@{/login}" style="cursor: pointer !important;">Login</a>
+    </nav>
+    <section layout:fragment="open_content"></section>
+</div>
+</body>
+</html>

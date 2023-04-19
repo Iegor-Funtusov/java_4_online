@@ -10,6 +10,6 @@ public class AdminController {
 
     @GetMapping("/home")
     public String home() {
-        return "page/admin/home";
+        return "pages/admin/home";
     }
 }

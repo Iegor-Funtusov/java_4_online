@@ -30,9 +30,12 @@ public abstract class BaseEntity {
     @Column(nullable = false)
     private Date updated;
 
+    private Boolean visible;
+
     public BaseEntity() {
         this.created = new Date();
         this.updated = new Date();
+        this.visible = true;
     }
 
     @PreUpdate

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{fragments/open_layout}">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div layout:fragment="open_content">
+  <div class="row">
+    <div class="col">
+      <div class="card mt-5 mb-5">
+        <div class="card-header">
+          <span th:text="${book.getBookName()}">name</span>
+        </div>
+        <div class="card-body">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <img th:src="${book.getImageUrl()}" alt="">
+              </div>
+              <div class="col">
+                <table>
+                  <tr>
+                    <td>Publisher</td>
+                    <td>
+                      <a
+                              th:href="@{'/books?publisher=' + ${book.getPublisher().getId()}}"
+                              th:text="${book.getPublisher().getName()}">
+
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Page size</td>
+                    <td>
+                      <span th:text="${book.getPageSize()}"></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Publication date</td>
+                    <td>
+                      <span th:text="${book.getPublicationDate()}"></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Authors</td>
+                    <td>
+                      <table>
+                        <tr th:each="author : ${book.getAuthors()}">
+                          <td>
+                            <a
+                                    th:href="@{'/books?author=' + ${author.getId()}}"
+                                    th:text="${author.getName()}">
+
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="col">
+                <span th:text="${book.getPrice()}">name</span>
+              </div>
+            </div>
+          </div>
+          <div class="container mt-5">
+            <div class="row">
+              <div class="col">
+                <table>
+                  <tr>
+                    <td>
+                      <span th:text="${book.getDescription()}"></span>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

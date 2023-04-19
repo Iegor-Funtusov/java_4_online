@@ -10,6 +10,6 @@ public class ManagerController {
 
     @GetMapping("/home")
     public String home() {
-        return "page/manager/home";
+        return "pages/manager/home";
     }
 }
