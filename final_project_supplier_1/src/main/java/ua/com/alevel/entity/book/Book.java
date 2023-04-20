@@ -1,20 +1,12 @@
-package ua.com.alevel.persistence.entity.book;
+package ua.com.alevel.entity.book;
 
 import lombok.Getter;
 import lombok.Setter;
-import ua.com.alevel.persistence.entity.BaseEntity;
-import ua.com.alevel.persistence.entity.author.Author;
-import ua.com.alevel.persistence.entity.publisher.Publisher;
-import ua.com.alevel.persistence.listener.BookVisibleGenerationListener;
+import ua.com.alevel.entity.BaseEntity;
+import ua.com.alevel.entity.author.Author;
+import ua.com.alevel.entity.publisher.Publisher;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EntityListeners;
-import javax.persistence.FetchType;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
@@ -23,9 +15,6 @@ import java.util.Set;
 @Setter
 @Entity
 @Table(name = "books")
-@EntityListeners({
-        BookVisibleGenerationListener.class
-})
 public class Book extends BaseEntity {
 
     @Column(name = "book_name")

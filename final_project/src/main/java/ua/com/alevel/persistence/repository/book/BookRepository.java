@@ -15,7 +15,12 @@ import java.util.Set;
 public interface BookRepository extends BaseRepository<Book> {
 
     List<Book> findByPublisher(Publisher publisher);
+    List<Book> findByBookNameContaining(String bookName);
+    List<Book> findAllByIsbnIn(List<String> isbn);
+
     @Query("from Book b join b.authors ba where ba.id = :authorId")
     List<Book> findByAuthor(@Param("authorId") Long authorId);
-    List<Book> findByBookNameContaining(String bookName);
+
+    @Query("select b.isbn from Book b where b.quantity = 0")
+    List<String> findAllIsbnWhereQuantityIsZero();
 }
