@@ -19,6 +19,12 @@
         <neovisionaries.version>1.29</neovisionaries.version>
         <commons.lang3.version>3.12.0</commons.lang3.version>
         <commons.collections4.version>4.4</commons.collections4.version>
+        <slf4j.version>1.7.30</slf4j.version>
+        <logback.version>1.2.3</logback.version>
+<!--        <log.dir>logs</log.dir>-->
+<!--        <log.info>${log.dir}/info.log</log.info>-->
+<!--        <warn.info>${log.dir}/warn.log</warn.info>-->
+<!--        <error.info>${log.dir}/error.log</error.info>-->
     </properties>
 
     <dependencies>
@@ -76,6 +82,24 @@
             <groupId>com.neovisionaries</groupId>
             <artifactId>nv-i18n</artifactId>
             <version>${neovisionaries.version}</version>
+        </dependency>
+
+        <!-- logs -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+            <version>${logback.version}</version>
         </dependency>
 
         <dependency>

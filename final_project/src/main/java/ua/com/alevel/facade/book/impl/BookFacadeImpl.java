@@ -7,8 +7,11 @@ import org.springframework.web.context.request.WebRequest;
 import ua.com.alevel.data.response.BookPDPDto;
 import ua.com.alevel.data.response.BookPLPDto;
 import ua.com.alevel.facade.book.BookFacade;
+import ua.com.alevel.logger.LoggerLevel;
 import ua.com.alevel.persistence.entity.book.Book;
+import ua.com.alevel.processor.InjectLog;
 import ua.com.alevel.service.BookService;
+import ua.com.alevel.service.LoggerService;
 
 import java.util.Collection;
 import java.util.Map;
@@ -16,6 +19,9 @@ import java.util.Optional;
 
 @Service
 public class BookFacadeImpl implements BookFacade {
+
+    @InjectLog
+    private LoggerService loggerService;
 
     private final BookService bookService;
 
@@ -25,8 +31,10 @@ public class BookFacadeImpl implements BookFacade {
 
     @Override
     public BookPDPDto findById(Long id) {
+        loggerService.print(LoggerLevel.INFO, "find book by " + id + "id");
         Optional<Book> optionalBook = bookService.findById(id);
         if (optionalBook.isEmpty()) {
+            loggerService.print(LoggerLevel.ERROR, "book not found by " + id + "id");
             throw new RuntimeException("book not found");
         }
         Book book = optionalBook.get();

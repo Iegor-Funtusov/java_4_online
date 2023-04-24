@@ -34,7 +34,7 @@ public class SupplierScheduler {
         this.bookRepository = bookRepository;
     }
 
-    @Scheduled(cron = "0 * * ? * *")
+//    @Scheduled(cron = "0 * * ? * *")
     public void callToSupplier() {
         List<String> isbnList = bookRepository.findAllIsbnWhereQuantityIsZero();
         if (CollectionUtils.isNotEmpty(isbnList)) {
