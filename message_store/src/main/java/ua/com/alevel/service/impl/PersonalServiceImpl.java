@@ -63,6 +63,12 @@ public class PersonalServiceImpl implements PersonalService {
 
     @Override
     @Transactional(readOnly = true)
+    public boolean existsByEmail(String email) {
+        return personalRepository.existsByEmail(email);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
     public Personal findByEmail(String email) {
         return (Personal) personalRepository
                 .findByEmail(email)

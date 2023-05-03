@@ -29,7 +29,7 @@ public class AuthValidatorFacadeImpl implements AuthValidatorFacade {
         if (data.getEmail().length() < 6 || data.getEmail().length() > 32) {
             errors.rejectValue("email", "Size.authForm.email");
         }
-        if (personalService.findByEmail(data.getEmail()) != null) {
+        if (personalService.existsByEmail(data.getEmail())) {
             errors.rejectValue("email", "Duplicate.authForm.email");
         }
 
