@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{fragments/personal_layout}">
+<head>
+  <meta charset="utf-8">
+  <title>Details Post</title>
+
+  <style type="text/css">
+    .like-dislike-section {
+      cursor: pointer;
+    }
+  </style>
+
+</head>
+<body>
+
+<div layout:fragment="personal_content">
+
+  <div class="row">
+    <div class="col-12">
+      <div class="card mb-2 mt-2">
+        <div class="card-header">
+          Details Post
+        </div>
+        <div class="card-body">
+          <table class="table table-hover">
+            <tr>
+              <th>title</th>
+              <td th:text="${postFullData.getTitle()}"></td>
+            </tr>
+            <tr>
+              <th>comment</th>
+              <td th:text="${postFullData.getComment()}"></td>
+            </tr>
+            <tr>
+              <th>created</th>
+              <td th:text="${#calendars.format(postFullData.getCreated(),'dd MMMM yyyy')}"></td>
+            </tr>
+            <tr>
+              <th>message</th>
+              <td th:text="${postFullData.getMessage()}"></td>
+            </tr>
+            <tr>
+              <th>like</th>
+              <td>
+                <div id="like-section" class="like-dislike-section" th:data-like-info="${postFullData.getLikes()}">
+                  <div th:if="not ${postFullData.getLikes().isEmpty()}">
+                    <div th:text="${postFullData.getLikes().values().size()}">
+                    </div>
+                  </div>
+                  <div th:unless="not ${postFullData.getLikes().isEmpty()}">
+                    <span>0</span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th>dislike</th>
+              <td>
+                <div id="dislike-section" class="like-dislike-section" th:data-like-info="${postFullData.getDislikes()}">
+                  <div th:if="not ${postFullData.getDislikes().isEmpty()}">
+                    <div th:text="${postFullData.getDislikes().values().size()}">
+                    </div>
+                  </div>
+                  <div th:unless="not ${postFullData.getDislikes().isEmpty()}">
+                    <span>0</span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </table>
+          <div th:if="${reaction}" class="mt-2 mb-2">
+            <div class="btn-group">
+              <a class="btn" th:href="@{'/personal/post/like/' + ${postFullData.getId()}}"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+              <a class="btn" th:href="@{'/personal/post/dislike/' + ${postFullData.getId()}}"><i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
+            </div>
+          </div>
+          <!--                    <div th:unless="${reaction}" class="mt-2 mb-2">-->
+          <!--                        <div class="col-md-8 mx-auto">-->
+          <!--                            <h2>Upload File</h2>-->
+          <!--                            <form method="post" th:action="@{'/personal/post/upload/' + ${postFullData.getId()}}" enctype="multipart/form-data">-->
+          <!--                                <div class="form-group">-->
+          <!--                                    <input type="file" name="file" class="form-control-file">-->
+          <!--                                </div>-->
+          <!--                                <button type="submit" class="btn btn-primary">Upload File</button>-->
+          <!--                            </form>-->
+          <!--                        </div>-->
+          <!--                    </div>-->
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<th:block layout:fragment="scripts">
+  <script type="text/javascript" th:src="@{/js/post_details.js}"></script>
+</th:block>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+package ua.com.alevel;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.event.ApplicationReadyEvent;
+import org.springframework.context.event.EventListener;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
+import ua.com.alevel.persistence.entity.entity.Admin;
+import ua.com.alevel.persistence.entity.entity.Personal;
+import ua.com.alevel.persistence.entity.entity.User;
+import ua.com.alevel.persistence.repository.user.AdminRepository;
+import ua.com.alevel.persistence.repository.user.PersonalRepository;
+
+import java.io.IOException;
+import java.util.Optional;
+
+@SpringBootApplication
+public class MessageStareApplication {
+
+    @Value("${initPersonals}")
+    private boolean initPersonals;
+
+    private final AdminRepository adminRepository;
+    private final PersonalRepository personalRepository;
+    private final BCryptPasswordEncoder bCryptPasswordEncoder;
+
+    public MessageStareApplication(
+            AdminRepository adminRepository,
+            PersonalRepository personalRepository,
+            BCryptPasswordEncoder bCryptPasswordEncoder) {
+        this.adminRepository = adminRepository;
+        this.personalRepository = personalRepository;
+        this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+    }
+
+    public static void main(String[] args) {
+        SpringApplication.run(MessageStareApplication.class, args);
+    }
+
+    @EventListener(ApplicationReadyEvent.class)
+    public void init() throws IOException {
+        String email = "admin@gmail.com";
+        String password = "12345678";
+        Optional<User> optionalAdmin = adminRepository.findByEmail(email);
+        if (optionalAdmin.isEmpty()) {
+            Admin admin = new Admin();
+            admin.setEmail(email);
+            admin.setPassword(bCryptPasswordEncoder.encode(password));
+            adminRepository.save(admin);
+        }
+        if (initPersonals) {
+            System.out.println("start init");
+            for (int i = 0; i < 111; i++) {
+                Personal personal = new Personal();
+                personal.setPassword(bCryptPasswordEncoder.encode(password));
+                personal.setEmail("personal" + i + "@gmail.com");
+                personalRepository.save(personal);
+            }
+            System.out.println("finish init");
+        }
+    }
+}

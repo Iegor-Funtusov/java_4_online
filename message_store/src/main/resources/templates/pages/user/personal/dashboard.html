@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+      layout:decorate="~{fragments/personal_layout}">
+<head>
+  <meta charset="utf-8">
+  <title>Home</title>
+</head>
+<body>
+
+<div layout:fragment="personal_content">
+
+<!--  <h1>-->
+<!--    Logged user: <span sec:authentication="name"></span>-->
+<!--  </h1>-->
+
+  <div class="row">
+    <div class="col-12">
+      <div class="card mt-2 mb-2">
+        <div class="card-header">
+          Chart
+        </div>
+        <div class="card-body">
+          <canvas id="myChart" width="400" height="200"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<th:block layout:fragment="scripts">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+  <script type="text/javascript" th:src="@{/js/chart.js}"></script>
+</th:block>
+
+</body>
+</html>

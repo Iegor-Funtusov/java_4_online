@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{fragments/personal_layout}">
+<head>
+    <meta charset="utf-8">
+    <title>My Post</title>
+</head>
+<body>
+
+<div layout:fragment="personal_content">
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-2 mt-2">
+                <div class="card-header">
+                    My Post
+                </div>
+                <div class="card-body">
+                    <table class="table table-sm table-hover">
+                        <thead>
+                        <tr>
+                            <th>title</th>
+                            <th>created</th>
+                            <th>update</th>
+                            <th>remove</th>
+                            <th>details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="post,iter : ${pageData.getItems()}">
+                            <td th:text="${post.getTitle()}"></td>
+                            <td th:text="${#calendars.format(post.getCreated(),'dd MMMM yyyy')}"></td>
+                            <td>
+                                <a th:href="@{'/personal/post/update/' + ${post.getId()}}" type="button" class="btn btn-warning">update</a>
+                            </td>
+                            <td>
+                                <a th:href="@{'/personal/post/delete/' + ${post.getId()}}" type="button" class="btn btn-danger">delete</a>
+                            </td>
+                            <td>
+                                <a th:href="@{'/personal/post/details/' + ${post.getId()} + '?reaction=false'}" type="button" class="btn btn-primary">details</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="card mt-2">
+                <div class="card-header">
+                    <a type="button" class="btn btn-primary" th:href="@{/personal/post/new}">Add</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
