@@ -7,9 +7,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.multipart.MultipartFile;
 import ua.com.alevel.facade.PostFacade;
-import ua.com.alevel.persistence.entity.entity.Personal;
+import ua.com.alevel.persistence.entity.user.Personal;
 import ua.com.alevel.persistence.entity.post.Post;
 import ua.com.alevel.persistence.entity.post.Reaction;
+import ua.com.alevel.service.ElasticPostSearchService;
 import ua.com.alevel.service.PersonalService;
 import ua.com.alevel.service.PostService;
 import ua.com.alevel.service.ReactionService;
@@ -33,14 +34,17 @@ public class PostFacadeImpl implements PostFacade {
     private final PostService postService;
     private final ReactionService reactionService;
     private final PersonalService personalService;
+    private final ElasticPostSearchService elasticPostSearchService;
 
     public PostFacadeImpl(
             PostService postService,
             ReactionService reactionService,
-            PersonalService personalService) {
+            PersonalService personalService,
+            ElasticPostSearchService elasticPostSearchService) {
         this.postService = postService;
         this.reactionService = reactionService;
         this.personalService = personalService;
+        this.elasticPostSearchService = elasticPostSearchService;
     }
 
     @Override
@@ -168,6 +172,11 @@ public class PostFacadeImpl implements PostFacade {
         data.setDislikePost(dislikePost);
 
         return data;
+    }
+
+    @Override
+    public List<String> searchPostMessage(String query) {
+        return elasticPostSearchService.searchPostMessage(query);
     }
 
     private void generatePostResponseData(PostResponseData data, List<Long> likeIds, List<Long> dislikeIds) {

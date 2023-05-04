@@ -8,11 +8,15 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import ua.com.alevel.facade.PostFacade;
+import ua.com.alevel.util.WebRequestUtil;
 import ua.com.alevel.web.data.PostData;
+
+import java.util.List;
 
 @Controller
 @RequestMapping("/personal/post")
@@ -94,5 +98,17 @@ public class PostController {
         }
         postFacade.uploadFile(file, id);
         return "redirect:/personal/post/details/" + id + "?reaction=false";
+    }
+
+    @PostMapping("/search")
+    private String searchBooks(@RequestParam String query, RedirectAttributes ra) {
+        ra.addAttribute(WebRequestUtil.SEARCH_MESSAGE_PARAM, query);
+        ra.addAttribute("owner", false);
+        return "redirect:/personal/post/all";
+    }
+
+    @GetMapping("/suggestions")
+    private @ResponseBody List<String> allSearchPosts(@RequestParam String query) {
+        return postFacade.searchPostMessage(query);
     }
 }

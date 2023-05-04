@@ -1,6 +1,6 @@
 package ua.com.alevel.service;
 
-import ua.com.alevel.persistence.entity.entity.Personal;
+import ua.com.alevel.persistence.entity.user.Personal;
 
 import java.util.List;
 

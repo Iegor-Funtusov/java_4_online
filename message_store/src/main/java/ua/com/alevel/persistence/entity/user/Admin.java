@@ -1,4 +1,4 @@
-package ua.com.alevel.persistence.entity.entity;
+package ua.com.alevel.persistence.entity.user;
 
 import lombok.Getter;
 import lombok.Setter;

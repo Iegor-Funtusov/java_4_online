@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import ua.com.alevel.persistence.entity.AbstractEntity;
-import ua.com.alevel.persistence.entity.entity.Personal;
+import ua.com.alevel.persistence.entity.user.Personal;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

@@ -28,5 +28,6 @@ public class PersistenceRequestData {
         this.sort = sortData.getSort();
         this.order = sortData.getOrder();
         this.owner = WebRequestUtil.getOwner(request);
+        this.parameters = WebRequestUtil.generateParameters(request);
     }
 }

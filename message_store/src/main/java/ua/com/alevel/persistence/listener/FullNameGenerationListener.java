@@ -1,7 +1,7 @@
 package ua.com.alevel.persistence.listener;
 
 import org.apache.commons.lang.StringUtils;
-import ua.com.alevel.persistence.entity.entity.Personal;
+import ua.com.alevel.persistence.entity.user.Personal;
 
 import javax.persistence.PostLoad;
 import javax.persistence.PostPersist;

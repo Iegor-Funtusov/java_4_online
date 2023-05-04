@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-import ua.com.alevel.persistence.entity.entity.Personal;
+import ua.com.alevel.persistence.entity.user.Personal;
 import ua.com.alevel.persistence.entity.post.Post;
 import ua.com.alevel.persistence.entity.post.Reaction;
 import ua.com.alevel.persistence.repository.post.PostRepository;

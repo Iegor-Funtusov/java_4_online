@@ -1,5 +1,6 @@
 package ua.com.alevel.service.impl;
 
+import org.apache.commons.collections.MapUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -10,7 +11,7 @@ import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import ua.com.alevel.persistence.entity.entity.Personal;
+import ua.com.alevel.persistence.entity.user.Personal;
 import ua.com.alevel.persistence.entity.post.Post;
 import ua.com.alevel.persistence.repository.post.PostRepository;
 import ua.com.alevel.persistence.repository.user.PersonalRepository;
@@ -18,6 +19,10 @@ import ua.com.alevel.service.PostService;
 import ua.com.alevel.service.ReactionService;
 import ua.com.alevel.util.SecurityUtil;
 import ua.com.alevel.web.data.PersistenceRequestData;
+
+import java.util.Map;
+
+import static ua.com.alevel.util.WebRequestUtil.SEARCH_MESSAGE_PARAM;
 
 @Service
 public class PostServiceImpl implements PostService {
@@ -94,6 +99,13 @@ public class PostServiceImpl implements PostService {
         if (data.isOwner()) {
             return postRepository.findAllByPersonal(personal, PageRequest.of(data.getPage() - 1, data.getSize(), sort));
         } else {
+            Map<String, Object> parameters = data.getParameters();
+            if (MapUtils.isNotEmpty(parameters)) {
+                String query = (String) parameters.get(SEARCH_MESSAGE_PARAM);
+                if (StringUtils.isNotBlank(query)) {
+                    return postRepository.findAllByPersonalIsNotAndMessageContainingIgnoreCase(personal, query, PageRequest.of(data.getPage() - 1, data.getSize(), sort));
+                }
+            }
             return postRepository.findAllByPersonalIsNot(personal, PageRequest.of(data.getPage() - 1, data.getSize(), sort));
         }
     }

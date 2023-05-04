@@ -7,6 +7,8 @@ import ua.com.alevel.web.data.PersonalDashboardChartData;
 import ua.com.alevel.web.data.PostData;
 import ua.com.alevel.web.data.PostResponseData;
 
+import java.util.List;
+
 public interface PostFacade {
 
     void create(PostData data);
@@ -18,4 +20,5 @@ public interface PostFacade {
     void dislike(Long id);
     void uploadFile(MultipartFile file, Integer postId);
     PersonalDashboardChartData generatePersonalDashboardChartData();
+    List<String> searchPostMessage(String query);
 }

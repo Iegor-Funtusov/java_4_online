@@ -2,7 +2,7 @@ package ua.com.alevel.facade.impl;
 
 import org.springframework.stereotype.Service;
 import ua.com.alevel.facade.RegistrationFacade;
-import ua.com.alevel.persistence.entity.entity.Personal;
+import ua.com.alevel.persistence.entity.user.Personal;
 import ua.com.alevel.service.PersonalService;
 import ua.com.alevel.web.data.AuthData;
 
